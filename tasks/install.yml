@@ -90,7 +90,7 @@
 
 - name: Install NPM packages
   import_tasks: install_npm.yml
-  when: (odoo_version | int) >= 9
+  when: (odoo_version | int) >= 9 and (odoo_version | int) <= 11
   tags:
     - odoo
     - odoo_packages
